@@ -175,7 +175,7 @@
         </div>
     </section>
 
-<!-- SECCIÓN DE VIDEO INSTITUCIONAL CORPORATIVO -->
+    <!-- SECCIÓN DE VIDEO INSTITUCIONAL CORPORATIVO -->
     <section class="py-16 bg-white border-b border-slate-100">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-xs uppercase tracking-widest text-emerald-700 font-bold mb-2">Presentación Oficial</h2>
@@ -184,7 +184,7 @@
                 Descubre cómo en Zodion optimizamos las operaciones industriales, garantizamos la inocuidad alimentaria y respaldamos técnicamente a las instituciones en la región.
             </p>
             
-            <!-- Contenedor Responsivo con tamaño optimizado (max-w-2xl en lugar de max-w-4xl) -->
+            <!-- Contenedor Responsivo con tamaño optimizado (max-w-2xl) -->
             <div class="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-900">
                 <iframe 
                     src="https://www.youtube.com/embed/BZPgh6lhNb4?rel=0" 
@@ -379,6 +379,18 @@
                             <span class="font-semibold text-brand-lime">Actividad:</span>
                             <span class="text-emerald-100">Consultoría Ambiental</span>
                         </div>
+                        <!-- Correo Corporativo con enlace directo y botón de copiado rápido -->
+                        <div class="pt-2 border-t border-emerald-800/70 space-y-2">
+                            <span class="block font-semibold text-brand-lime">Correo Corporativo:</span>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <a id="corp-email-link" href="#" class="text-emerald-100 hover:text-white underline decoration-emerald-500/60 underline-offset-4 transition-colors break-all">
+                                    Cargando correo...
+                                </a>
+                                <button type="button" id="copy-email-btn" onclick="copiarCorreoCorporativo()" class="px-2.5 py-1 rounded-md bg-emerald-900/80 hover:bg-emerald-800 border border-emerald-600/40 text-xs font-medium text-emerald-200 transition-all cursor-pointer" title="Copiar dirección de correo">
+                                    Copiar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="text-xs text-emerald-300">
                         Juntos lo hacemos posible.
@@ -436,6 +448,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script para ensamblar el correo corporativo y botón de copiado -->
+    <script>
+        (function() {
+            const user = "contacto";
+            const domain = "zodion.com.co";
+            const fullEmail = user + "@" + domain;
+            const linkEl = document.getElementById("corp-email-link");
+            if (linkEl) {
+                linkEl.href = "mailto:" + fullEmail;
+                linkEl.textContent = fullEmail;
+            }
+        })();
+
+        function copiarCorreoCorporativo() {
+            const email = "contacto" + "@" + "zodion.com.co";
+            navigator.clipboard.writeText(email).then(function() {
+                const btn = document.getElementById("copy-email-btn");
+                const originalText = btn.textContent;
+                btn.textContent = "¡Copiado!";
+                btn.classList.add("bg-brand-lime", "text-slate-950", "border-brand-lime");
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.classList.remove("bg-brand-lime", "text-slate-950", "border-brand-lime");
+                }, 2000);
+            });
+        }
+    </script>
 
 </body>
 </html>
