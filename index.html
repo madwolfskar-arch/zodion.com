@@ -115,32 +115,32 @@
 <body class="bg-brand-light text-slate-700 font-sans antialiased selection:bg-brand-lime selection:text-white">
 
     <!-- HEADER / NAVEGACIÓN B2B -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
             <!-- Logotipo Oficial (logo1) -->
-            <div class="flex items-center space-x-3">
+            <a href="#" class="flex items-center space-x-2.5 shrink-0">
                 <img src="logo1.png" alt="Zodion Servicios Ambientales" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='logo1.jpg';">
                 <div class="flex flex-col">
-                    <span class="text-xl font-bold tracking-tight text-brand-dark leading-tight">Zodion</span>
-                    <span class="text-xs uppercase tracking-widest text-emerald-700 font-semibold">Servicios Ambientales</span>
+                    <span class="text-lg sm:text-xl font-bold tracking-tight text-brand-dark leading-tight whitespace-nowrap">Zodion</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider text-emerald-700 font-semibold whitespace-nowrap">Servicios Ambientales</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Menú Minimalista -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="#filosofia" class="hover:text-brand-forest transition-colors">Filosofía & MIA</a>
-                <a href="#soluciones" class="hover:text-brand-forest transition-colors">Soluciones Técnicas</a>
-                <a href="#galeria" class="hover:text-brand-forest transition-colors">Galería de Campo</a>
-                <a href="#proceso" class="hover:text-brand-forest transition-colors">Metodología</a>
-                <a href="#contacto" class="hover:text-brand-forest transition-colors">Contacto</a>
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-600 whitespace-nowrap">
+                <a href="#filosofia" class="hover:text-brand-forest transition-colors whitespace-nowrap">Filosofía & MIA</a>
+                <a href="#soluciones" class="hover:text-brand-forest transition-colors whitespace-nowrap">Soluciones Técnicas</a>
+                <a href="#galeria" class="hover:text-brand-forest transition-colors whitespace-nowrap">Galería de Campo</a>
+                <a href="#proceso" class="hover:text-brand-forest transition-colors whitespace-nowrap">Metodología</a>
+                <a href="#contacto" class="hover:text-brand-forest transition-colors whitespace-nowrap">Contacto</a>
             </nav>
 
             <!-- Selector de Idioma (EE. UU. / Internacional) y CTA Destacado -->
-            <div class="flex items-center space-x-3">
-                <a href="en/consulting/" class="inline-flex items-center px-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-700 hover:border-brand-forest hover:text-brand-forest hover:bg-emerald-50/50 transition-all" title="English Version - International Consulting (USA)">
-                    EN | International
+            <div class="flex items-center space-x-2.5 shrink-0">
+                <a href="en/consulting/" class="inline-flex items-center px-3.5 py-2 rounded-lg border border-emerald-600/30 bg-emerald-50/70 text-xs font-semibold text-brand-forest hover:border-brand-forest hover:bg-emerald-100/80 transition-all whitespace-nowrap shrink-0" title="English Version - International Consulting (USA)">
+                    🇺🇸 EN | USA & Global
                 </a>
-                <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-brand-forest text-white text-sm font-semibold shadow-sm hover:bg-emerald-800 transition-all">
+                <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-brand-forest text-white text-xs sm:text-sm font-semibold shadow-sm hover:bg-emerald-800 transition-all whitespace-nowrap shrink-0">
                     Solicitar Diagnóstico Técnico
                 </a>
             </div>
@@ -179,6 +179,20 @@
             </div>
         </div>
     </section>
+
+    <!-- FRANJA DE ACCESO INTERNACIONAL (EE. UU. / OUTSOURCING) -->
+    <div class="bg-slate-900 border-t border-emerald-500/20 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
+            <div class="flex items-center space-x-2.5 text-center sm:text-left">
+                <span class="px-2 py-0.5 rounded bg-emerald-900/80 border border-emerald-500/30 text-brand-lime font-semibold text-xs whitespace-nowrap">🇺🇸 USA & Global</span>
+                <span class="text-slate-200">Looking for Industrial Consulting, Food Safety & Outsourcing in the USA?</span>
+            </div>
+            <a href="en/consulting/" class="font-semibold text-brand-lime hover:text-emerald-300 transition-colors whitespace-nowrap inline-flex items-center gap-1">
+                <span>View English Page</span>
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </div>
 
     <!-- SECCIÓN DE VIDEO INSTITUCIONAL CORPORATIVO -->
     <section class="py-16 bg-white border-b border-slate-100">
@@ -484,6 +498,5 @@
 
 </body>
 </html>
-
 
 
